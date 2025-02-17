@@ -18,4 +18,9 @@ class VpcStack(Stack):
                                    name="Private",
                                    subnet_type=ec2.SubnetType.PRIVATE_WITH_EGRESS
                                )
-                           ])
+                           ],
+                            nat_gateways=1  
+        )
+
+       
+        self.vpc_id = self.vpc.vpc_id
